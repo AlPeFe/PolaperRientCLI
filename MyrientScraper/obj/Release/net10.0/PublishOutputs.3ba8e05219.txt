@@ -1,0 +1,7 @@
+/home/polaper/Projects/PolaperRientCLI/MyrientScraper/publish/MyrientScraper
+/home/polaper/Projects/PolaperRientCLI/MyrientScraper/publish/MyrientScraper.dll
+/home/polaper/Projects/PolaperRientCLI/MyrientScraper/publish/MyrientScraper.deps.json
+/home/polaper/Projects/PolaperRientCLI/MyrientScraper/publish/MyrientScraper.runtimeconfig.json
+/home/polaper/Projects/PolaperRientCLI/MyrientScraper/publish/MyrientScraper.pdb
+/home/polaper/Projects/PolaperRientCLI/MyrientScraper/publish/AngleSharp.dll
+/home/polaper/Projects/PolaperRientCLI/MyrientScraper/publish/Spectre.Console.dll
