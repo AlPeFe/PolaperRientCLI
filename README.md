@@ -1,26 +1,3 @@
-# Myrient Downloader
-
-Una aplicación de consola en .NET 10 para scrapear y descargar archivos de juegos de Myrient usando Spectre.Console.
-
-## Características
-
-
-- .NET 10.0 SDK
-## Features
-
-- Downloads files from Myrient using HTTP.
-- Shows download progress.
-- Allows multiple simultaneous connections.
-- Easy to integrate into scripts or automated systems.
-
-## Usage
-
-## Instalación
-
-```bash
-cd MyrientScraper
-dotnet restore
-
 # MyrientScraper
 
 MyrientScraper is a command-line tool for downloading and scraping game files from the Myrient archive. It is designed for fast, efficient downloads and provides progress reporting and file size formatting utilities.
@@ -86,29 +63,55 @@ Polaper
 - `Storage.cs` - Guardar/cargar archivos JSON
 - `Downloader.cs` - Gestión de descargas con progreso
 - `UserInterface.cs` - Interfaz de usuario con Spectre.Console
-- `Program.cs` - Punto de entrada
 
-## Dependencias
+# MyrientScraper
 
-- `Spectre.Console` - Biblioteca de UI de terminal
-- `AngleSharp` - Biblioteca de parsing HTML
+MyrientScraper is a simple command-line tool for downloading multiple ROMs (game files) at once from the Myrient archive. It is designed to make it easy to scrape and download games quickly, with support for downloading several files simultaneously.
 
-## Ejemplo de Flujo de Uso
+## Key Features
 
-1. Ejecutar: `./MyrientScraper`
-2. Seleccionar "Scrape URL"
-3. Ingresar URL: `https://myrient.erista.me/files/No-Intro/Nintendo%20-%20Nintendo%203DS%20(Decrypted)/`
-4. Esperar el scraping...
-5. Navegar y seleccionar archivos con flechas y espacio
-6. Presionar Enter para confirmar
-7. Revisar resumen y confirmar descarga
-8. Ver progreso de descargas
-9. Los archivos descargados estarán en `./downloads/`
+- Download many ROMs at the same time (multi-download)
+- Easy to use, no technical knowledge required
+- Compatible with Windows and Linux
+- Shows download progress for each file
+- Saves downloaded files in a dedicated folder
 
-## Notas
+## How It Works
 
-- Los archivos scrapeados se guardan automáticamente en `./scraped_data/`
-- Los archivos descargados se guardan en `./downloads/`
-- Puedes cargar datos previamente scrapeados usando "Load JSON"
-- La interfaz es completamente interactiva, no requiere comandos de línea
+1. Start the program and enter the URL of the Myrient archive folder you want to scrape.
+2. The tool will list all available ROM files.
+3. Select the games you want to download.
+4. The program will download all selected files at once, showing progress for each.
+5. Your ROMs will be saved in the `downloads` folder.
+
+## Getting Started
+
+### Requirements
+- .NET 10.0 or later
+- Windows or Linux
+
+### Build and Run
+To build:
+
+```
+dotnet build MyrientScraper/MyrientScraper.csproj
+```
+
+To run:
+
+```
+sh MyrientScraper/run.sh
+```
+
+Or:
+
+```
+dotnet run --project MyrientScraper/MyrientScraper.csproj
+```
+
+## License
+MIT License
+
+## Author
+Polaper
 
