@@ -20,58 +20,59 @@ Una aplicación de consola en .NET 10 para scrapear y descargar archivos de jueg
 ```bash
 cd MyrientScraper
 dotnet restore
-dotnet build
+
+# MyrientScraper
+
+MyrientScraper is a command-line tool for downloading and scraping game files from the Myrient archive. It is designed for fast, efficient downloads and provides progress reporting and file size formatting utilities.
+
+## Features
+- Download files from Myrient with simulated browser headers
+- Progress reporting for downloads
+- File size parsing and formatting utilities
+- Customizable HTTP client settings for performance
+
+## Usage
+
+### Requirements
+- .NET 10.0 or later
+- Linux (tested)
+
+### Build
+To build the project:
+
+```
+dotnet build MyrientScraper/MyrientScraper.csproj
 ```
 
-## Cómo Ejecutar
+### Run
+To run the scraper:
 
-### Opción 1: Usar `dotnet run` (desarrollo)
-
-```bash
-dotnet run
+```
+sh MyrientScraper/run.sh
 ```
 
-### Opción 2: Usar el ejecutable compilado
+Or directly:
 
-```bash
-dotnet build
-./bin/Debug/net10.0/MyrientScraper
+```
+dotnet run --project MyrientScraper/MyrientScraper.csproj
 ```
 
-### Opción 3: Usar la versión publicada (recomendado)
+### Downloaded Files
+Downloaded files are saved in the `downloads/` directory.
 
-```bash
-dotnet publish -c Release -o ./publish
-cd publish
-./MyrientScraper
-```
+## Project Structure
+- Downloader.cs: Handles file downloads and progress reporting.
+- Scraper.cs: Main scraping logic.
+- Models.cs: Data models for game files.
+- Storage.cs: Handles storage and file management.
+- UserInterface.cs: Command-line interface utilities.
+- StringExtensions.cs: String helper methods.
 
-## Uso Interactivo
+## License
+This project is licensed under the MIT License.
 
-La aplicación es 100% interactiva con Spectre.Console:
-
-1. **Menú Principal**: Selecciona entre:
-   - Scrape URL - Scrapear una URL nueva
-   - Load JSON - Cargar datos guardados anteriormente
-   - Quit - Salir de la aplicación
-
-2. **Scrapear URL**:
-   - Ingresa la URL de Myrient (ej: https://myrient.erista.me/files/No-Intro/...)
-   - La aplicación scrapeará automáticamente los archivos
-   - Los datos se guardan en `./scraped_data/`
-
-3. **Seleccionar Archivos**:
-   - Navega con las flechas ↑↓
-   - Selecciona/deselecciona con [Espacio]
-   - Confirmar selección con [Enter]
-
-4. **Confirmar Descarga**:
-   - Revisa el resumen de archivos seleccionados
-   - Confirma la descarga
-   - Se muestra el progreso de cada archivo
-
-## Navegación
-
+## Author
+Polaper
 - **↑↓ Flechas**: Navegar entre opciones
 - **[Espacio]**: Seleccionar/deseleccionar archivos
 - **[Enter]**: Confirmar selección
@@ -110,3 +111,4 @@ La aplicación es 100% interactiva con Spectre.Console:
 - Los archivos descargados se guardan en `./downloads/`
 - Puedes cargar datos previamente scrapeados usando "Load JSON"
 - La interfaz es completamente interactiva, no requiere comandos de línea
+
